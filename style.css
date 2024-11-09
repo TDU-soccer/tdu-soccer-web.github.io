@@ -49,7 +49,6 @@ nav {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* 右側に影を追加 */
   transform: translateX(100%); /* 初期位置は画面外 */
   transition: transform 0.3s ease; /* スライドアニメーション */
-  overflow-y: auto;
 }
 
 /* メニューを開いた状態 */
