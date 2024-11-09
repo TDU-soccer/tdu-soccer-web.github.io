@@ -109,44 +109,49 @@ a:hover {
 #news {
     padding: 40px 20px;
     background-color: #f9f9f9;
-    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #news h2 {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #0044cc;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 .news-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    max-width: 600px;
-    margin: 0 auto;
     gap: 10px;
 }
 
 .news-item {
     display: flex;
-    gap: 15px;
-    font-size: 1em;
+    justify-content: space-between;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
-    width: 100%;
 }
 
 .news-item .date {
-    font-weight: bold;
-    color: #0044cc;
+    font-size: 0.9em;
+    color: #888;
     min-width: 100px;
     text-align: left;
 }
 
 .news-item .content {
-    color: #333;
+    font-size: 1em;
+    color: #0044cc;
+    text-decoration: none;
     flex-grow: 1;
     text-align: left;
+    transition: color 0.2s;
+}
+
+.news-item .content:hover {
+    color: #002288; /* ホバー時の色 */
 }
 
 
