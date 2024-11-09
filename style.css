@@ -106,6 +106,70 @@ a:hover {
   text-decoration: underline;
 }
 
+/* お知らせセクションのスタイル */
+#news {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#news h2 {
+    font-size: 2em;
+    color: #0044cc;
+    margin-bottom: 20px;
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.news-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.news-card h3 {
+    font-size: 1.25em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.news-card p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #0044cc;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.read-more:hover {
+    border-bottom: 1px solid #0044cc;
+}
+
+
+
+
 /* モバイルフレンドリー対応 */
 @media only screen and (max-width: 600px) {
   body {
