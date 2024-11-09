@@ -33,6 +33,7 @@
     <title>東京電機大学理工学部蹴球部 定期戦</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script src="script.js"></script>
 <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -94,18 +95,42 @@
         
         <section id="news">
             <h2>新着情報</h2>
-            <div class="news-list">
-                <div class="news-item">
-                    <span class="date">11月09日</span>
-                    <a href="#" class="content">定期戦の詳細が確定しました。</a>
-                </div>
-                <div class="news-item">
-                    <span class="date">11月02日</span>
-                    <a href="#" class="content">サッカー大会を実施しました。</a>
-                </div>
-                <!-- さらに新しい情報を追加できます -->
+            <!-- カテゴリタブ -->
+            <div class="news-tabs">
+                <button class="tab-link active" onclick="showCategory('teikisen')">定期戦に関するお知らせ</button>
+                <button class="tab-link" onclick="showCategory('event')">イベント情報</button>
+                <button class="tab-link" onclick="showCategory('other')">その他のお知らせ</button>
             </div>
-        </section>        
+        
+            <!-- 各カテゴリのニュースリスト -->
+            <div id="teikisen" class="news-content active">
+                <div class="news-item" onclick="toggleDetail(this)">
+                    <span class="title">定期戦の詳細が確定しました</span>
+                    <span class="date">00月00日</span>
+                    <div class="detail">2024年11月23日の定期戦について、詳細が確定しました。ぜひご参加ください。</div>
+                </div>
+                <!-- 他の定期戦に関するお知らせもここに追加 -->
+            </div>
+        
+            <div id="event" class="news-content">
+                <div class="news-item" onclick="toggleDetail(this)">
+                    <span class="title">サッカー大会を実施しました</span>
+                    <span class="date">00月00日</span>
+                    <div class="detail">地域の小学生を対象にサッカー大会を開催しました。多くのご参加ありがとうございました。</div>
+                </div>
+                <!-- 他のイベント情報もここに追加 -->
+            </div>
+        
+            <div id="other" class="news-content">
+                <div class="news-item" onclick="toggleDetail(this)">
+                    <span class="title">新しいお知らせ</span>
+                    <span class="date">00月00日</span>
+                    <div class="detail">新しい情報をお届けします。</div>
+                </div>
+                <!-- その他のお知らせもここに追加 -->
+            </div>
+        </section>
+              
         <section>
             <h2>お問い合わせ</h2>
             <p>お問い合わせは以下のSNSからお願いします。</p>
