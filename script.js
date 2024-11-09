@@ -18,3 +18,8 @@ function showCategory(category) {
 function toggleDetail(element) {
   element.classList.toggle('open');
 }
+
+function toggleMenu() {
+  document.body.classList.toggle("menu-open");
+}
+
