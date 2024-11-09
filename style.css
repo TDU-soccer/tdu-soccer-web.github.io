@@ -32,20 +32,43 @@ header h1 {
   font-size: 1.5em;
   cursor: pointer;
   margin-left: auto;
-  display: none; /* デフォルトで非表示 */
+  display: block; /* PCとモバイルで表示 */
 }
 
-/* ナビゲーションメニュー */
+/* 右端スライドメニュー設定 */
 nav {
-  display: flex;
+  display: none; /* デフォルトで非表示 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 200px; /* メニューの幅 */
+  height: 100%;
+  background-color: #0044cc;
+  z-index: 1000;
+  padding-top: 60px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* 右側に影を追加 */
+  transform: translateX(100%); /* 初期位置は画面外 */
+  transition: transform 0.3s ease; /* スライドアニメーション */
+}
+
+/* メニューを開いた状態 */
+.menu-open nav {
+  display: block;
+  transform: translateX(0); /* 右からスライドイン */
 }
 
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
+  margin: 0;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav ul li {
+  padding: 10px;
+  text-align: left;
 }
 
 nav ul li a {
@@ -83,7 +106,7 @@ iframe {
   width: 100%;
   height: 100%;
   border: 0;
-  z-index: 1; /* 動画がメニューより背面に配置されるようにする */
+  z-index: 1; /* 動画がメニューの背面に表示 */
 }
 
 footer {
@@ -206,32 +229,6 @@ a:hover {
     padding: 10px;
   }
 
-  nav {
-    display: none; /* モバイルではデフォルト非表示 */
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #0044cc;
-    z-index: 1000; /* メニューが動画より前面に表示 */
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 10px 0;
-  }
-
-  .menu-toggle {
-    display: block; /* モバイルで表示 */
-    margin-left: auto; /* 右端に固定 */
-  }
-
-  .menu-open nav {
-    display: flex; /* ハンバーガークリックで表示 */
-    flex-direction: column;
-    padding: 10px 0;
-  }
-
   .video-container {
     position: relative;
     width: 100%;
@@ -253,3 +250,4 @@ a:hover {
     height: 30px;
   }
 }
+
