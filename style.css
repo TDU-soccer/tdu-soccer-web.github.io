@@ -279,44 +279,49 @@ a:hover {
 }
 
 /* カードスタイル */
+/* カードデザイン */
 .result-card {
-  background: #0044cc; /* 大学イメージカラーの濃い青 */
-  color: #ffffff;
-  padding: 20px;
-  margin: 20px;
+  background-color: #e0e8f9; /* 薄い青のカード背景 */
+  border: 2px solid #0044cc; /* 濃い青色の枠線 */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 軽い影を追加 */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   max-width: 85%;
   margin: 20px auto;
-  font-family: 'Arial', sans-serif;
 }
 
+/* カードのタイトル */
 .result-card h2 {
   margin-top: 0;
-  font-size: 1.6em;
-  color: #ffd700; /* ゴールドカラーでアクセント */
+  font-size: 1.5em;
+  color: #0044cc; /* 濃い青色でアクセント */
+  margin-bottom: 10px;
 }
 
+/* テキスト */
 .result-card p {
-  font-size: 1.1em;
-  line-height: 1.4;
+  font-size: 1em;
+  line-height: 1.5;
   margin: 5px 0;
+  color: #333;
 }
 
+/* ホバー時のエフェクト */
 .result-card:hover {
-  transform: scale(1.03); /* 少し拡大して目立たせる */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px); /* 少し上に浮かせる */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* ホバー時に影を強調 */
 }
 
-/* カードアイコン（サッカーのイメージ） */
+/* アイコン */
 .result-card::before {
   content: "⚽";
-  font-size: 2.2em;
+  font-size: 2em;
+  color: #ffd700; /* ゴールドのアイコンでアクセント */
   display: block;
   margin-bottom: 10px;
-  color: #ffd700;
 }
 
 /* テーブルのスタイル */
