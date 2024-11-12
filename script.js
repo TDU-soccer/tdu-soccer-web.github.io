@@ -31,25 +31,25 @@ function showSlide(index) {
     slide.classList.toggle('active', i === index);
   });
 
-  // 一番最初のスライドなら次年度ボタンを非表示
-  document.querySelector('.slider-button.next').style.display = 
-    index === 0 ? 'none' : 'block';
-  
-  // 一番最後のスライドなら前年度ボタンを非表示
+  // 一番最初のスライドなら「前年度」ボタンを非表示
   document.querySelector('.slider-button.prev').style.display = 
+    index === 0 ? 'none' : 'block';
+
+  // 一番最後のスライドなら「次年度」ボタンを非表示
+  document.querySelector('.slider-button.next').style.display = 
     index === slides.length - 1 ? 'none' : 'block';
 }
 
 function nextSlide() {
-  if (currentIndex > 0) {
-    currentIndex--;
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
     showSlide(currentIndex);
   }
 }
 
 function prevSlide() {
-  if (currentIndex < slides.length - 1) {
-    currentIndex++;
+  if (currentIndex > 0) {
+    currentIndex--;
     showSlide(currentIndex);
   }
 }

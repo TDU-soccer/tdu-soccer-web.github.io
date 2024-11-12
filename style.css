@@ -259,11 +259,12 @@ a:hover {
   right: 10px;
 }
 
+/* スライダースタイル */
 .slider {
   display: flex;
   overflow: hidden;
   position: relative;
-  height: 200px;
+  height: 250px;
   margin-bottom: 20px;
 }
 
@@ -275,6 +276,21 @@ a:hover {
 
 .slide.active {
   display: block;
+}
+
+/* カードスタイル */
+.result-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.result-card:hover {
+  transform: scale(1.05);
 }
 
 /* テーブルのスタイル */
@@ -297,6 +313,7 @@ th, td {
 tr:nth-child(even) {
   background-color: #f9f9f9;
 }
+
 
 
 /* モバイルフレンドリー対応 */
