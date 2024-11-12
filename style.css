@@ -39,11 +39,9 @@ header h1 {
 }
 
 .menu-toggle {
-<<<<<<< HEAD
+
   font-size: 4em;
-=======
   font-size: 3em;
->>>>>>> 262c52003fd549937efb35a2f9bc1232a8438959
   cursor: pointer;
   position: fixed;
   top: 10px;
