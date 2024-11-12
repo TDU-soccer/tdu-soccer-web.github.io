@@ -23,3 +23,36 @@ function toggleMenu() {
   document.body.classList.toggle("menu-open");
 }
 
+let currentIndex = 0;
+const slides = document.querySelectorAll('.slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle('active', i === index);
+  });
+
+  // 一番最初のスライドなら次年度ボタンを非表示
+  document.querySelector('.slider-button.next').style.display = 
+    index === 0 ? 'none' : 'block';
+  
+  // 一番最後のスライドなら前年度ボタンを非表示
+  document.querySelector('.slider-button.prev').style.display = 
+    index === slides.length - 1 ? 'none' : 'block';
+}
+
+function nextSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    showSlide(currentIndex);
+  }
+}
+
+function prevSlide() {
+  if (currentIndex < slides.length - 1) {
+    currentIndex++;
+    showSlide(currentIndex);
+  }
+}
+
+// 初期状態を設定
+showSlide(currentIndex);
