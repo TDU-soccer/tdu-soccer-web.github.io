@@ -8,12 +8,22 @@ body {
 }
 
 header {
-  background-color: #0044cc;
+  background-color: #0044cc; /* 青色背景 */
   color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed; /* 固定する */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000; /* 他の要素の前面に表示 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* 下に影をつけて浮かせる */
+}
+
+main {
+  padding-top: 70px; /* ヘッダーの高さ分だけ余白を追加 */
 }
 
 .header-content {
@@ -29,12 +39,16 @@ header h1 {
 }
 
 .menu-toggle {
+<<<<<<< HEAD
   font-size: 4em;
+=======
+  font-size: 3em;
+>>>>>>> 262c52003fd549937efb35a2f9bc1232a8438959
   cursor: pointer;
   position: fixed;
   top: 10px;
   right: 10px;
-  z-index: 1100;
+  z-index: 5000;
   color: white;
   display: block; /* PCとモバイルで表示 */
 }
