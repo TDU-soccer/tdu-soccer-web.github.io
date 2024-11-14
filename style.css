@@ -424,6 +424,25 @@ tr:nth-child(even) {
     height: 30px;
   }
 
+  .top-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+      width: 90%; /* スマホで全幅に近いサイズに */
+      margin-bottom: 20px;
+  }
+
+  .sub-card {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .mini-card {
+      width: 90%; /* 小さいカードも全幅に近いサイズに */
+      margin-bottom: 10px;
+  }
   
 }
 
