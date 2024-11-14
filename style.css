@@ -397,7 +397,7 @@ tr:nth-child(even) {
 
 
 /* モバイルフレンドリー対応 */
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   body {
     font-size: 14px;
     padding: 10px;
